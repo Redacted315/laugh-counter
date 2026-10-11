@@ -1,0 +1,19 @@
+[project]
+name = "laugh-counter"
+version = "0.1.0"
+description = "A simple laugh counter desktop application"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+laugh-counter = "laugh_counter:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "laugh_counter"
+module-root = "src"
+source-include = ["src/laugh_counter/assets/**"]
